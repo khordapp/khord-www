@@ -61,12 +61,6 @@
     }
     .nav-brand:hover { opacity: 0.8; text-decoration: none !important; }
 
-    .nav-logo {
-      height: 1.75rem;
-      width: 1.75rem;
-      border-radius: 0.375rem;
-    }
-
     .nav-wordmark {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
@@ -75,16 +69,40 @@
       letter-spacing: -0.01em;
     }
 
-    .nav-links {
+    /* ── Scroll nav dots ── */
+    .scroll-nav {
       display: flex;
-      gap: 1.75rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.75rem;
+      flex-wrap: wrap;
     }
 
-    .nav-links a { color: var(--muted); }
-    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .scroll-nav a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--faint);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.15s;
+    }
+
+    .scroll-nav a::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--faint);
+      transition: background 0.15s;
+    }
+
+    .scroll-nav a:hover { color: var(--accent2); text-decoration: none; }
+    .scroll-nav a:hover::before { background: var(--accent2); }
 
     /* ── Hero ── */
     .hero {
@@ -432,7 +450,6 @@
 
     @media (max-width: 640px) {
       nav { padding: 1rem 1.25rem; }
-      .nav-links { gap: 1.25rem; font-size: 0.78rem; }
       .hero { padding: 5rem 1.25rem 4rem; }
       section { padding: 4rem 1.25rem; }
       .mixtape-highlight { padding: 1.75rem; }
@@ -444,15 +461,9 @@
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-brand">
-      <img class="nav-logo" src="logo.png" alt="Khord" />
       <span class="nav-wordmark">Khord</span>
     </a>
-    <div class="nav-links">
-      <a href="#how-it-works">How it works</a>
-      <a href="#mixtapes">Mixtapes</a>
-      <a href="#self-host">Self-host</a>
-      <a href="https://github.com/khordapp/khord">GitHub</a>
-    </div>
+    <a href="https://github.com/khordapp/khord" class="btn btn-secondary" style="font-size:0.78rem; padding: 0.45rem 1rem;">GitHub</a>
   </nav>
 
   <!-- Hero -->
@@ -473,6 +484,12 @@
     <div class="hero-actions">
       <a href="https://github.com/khordapp/khord" class="btn btn-primary">View on GitHub</a>
     </div>
+    <nav class="scroll-nav">
+      <a href="#how-it-works">How it works</a>
+      <a href="#mixtapes">Mixtapes</a>
+      <a href="#features">Features</a>
+      <a href="#self-host">Self-host</a>
+    </nav>
   </div>
 
   <!-- Platform pills -->
