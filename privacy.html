@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Khord</title>
+  <meta name="description" content="Privacy Policy for the Khord app and website." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #070504;
+      --bg2:     #0d0a07;
+      --border:  #231a0f;
+      --border2: #302518;
+      --text:    #ede5cc;
+      --muted:   #808080;
+      --faint:   #3d3225;
+      --accent:  #2558a8;
+      --accent2: #7ab4e8;
+      --link:    #6aaad8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-logo img { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-logo span { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 32px 96px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .updated {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 40px 0 12px;
+    }
+
+    p { color: #b8a98a; margin-bottom: 16px; }
+
+    ul {
+      color: #b8a98a;
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    ul li { margin-bottom: 6px; }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="logo.png" alt="Khord" />
+      <span>Khord</span>
+    </a>
+  </nav>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 16, 2026</p>
+
+    <p>Khord is a decentralized music sharing platform built on the AT Protocol. This policy explains what information we collect, how we use it, and your rights.</p>
+
+    <h2>Information You Provide</h2>
+    <p>When you sign in with Bluesky or another AT Protocol identity provider, Khord receives your decentralized identifier (DID), handle, and public profile information (display name, avatar). This information is already public on the AT Protocol network.</p>
+    <p>Songs you share, votes you cast, and setlists you create are stored as records on your AT Protocol Personal Data Server (PDS) — not on Khord's servers. These records are public by design, consistent with how the AT Protocol works.</p>
+
+    <h2>Information Collected Automatically</h2>
+    <p>Khord instances may log standard server access logs (IP address, request path, timestamp) for security and debugging purposes. These logs are not shared with third parties and are retained for a short period.</p>
+    <p>The Khord Android app does not collect analytics or crash data beyond what is provided by Google Play Services on your device.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>Khord integrates with the following third-party services to resolve streaming links for songs you share:</p>
+    <ul>
+      <li><strong>Spotify</strong> — track search via the Spotify Web API</li>
+      <li><strong>Apple iTunes Search API</strong> — song discovery and Apple Music links</li>
+      <li><strong>Deezer</strong> — track search via the public Deezer API</li>
+      <li><strong>YouTube Music</strong> — track search via the YouTube Data API (when enabled)</li>
+    </ul>
+    <p>These services are queried server-side when you share a song. No personal information is sent to these services — only song title and artist name.</p>
+
+    <h2>Data Storage</h2>
+    <p>Khord is self-hostable software. If you use a third-party Khord instance, that instance's operator controls the server and its data. Each instance may have its own data retention practices.</p>
+    <p>Your music activity (songs, votes, setlists) lives on your own AT Protocol PDS. You can delete any record at any time through your AT Protocol identity provider.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Khord is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy from time to time. The "last updated" date at the top of this page reflects the most recent revision.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be directed to <a href="mailto:hello@khord.app">hello@khord.app</a>.</p>
+  </main>
+
+  <footer>
+    &copy; 2026 Khord &nbsp;·&nbsp; <a href="/">Home</a>
+  </footer>
+
+</body>
+</html>
