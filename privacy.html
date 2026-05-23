@@ -116,11 +116,11 @@
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated: May 16, 2026</p>
 
-    <p>Khord is a decentralized music sharing platform built on the AT Protocol. This policy explains what information we collect, how we use it, and your rights.</p>
+    <p>Khord is a self-hosted music sharing app. This policy explains what information we collect, how we use it, and your rights.</p>
 
     <h2>Information You Provide</h2>
-    <p>When you sign in with Bluesky or another AT Protocol identity provider, Khord receives your decentralized identifier (DID), handle, and public profile information (display name, avatar). This information is already public on the AT Protocol network.</p>
-    <p>Songs you share, votes you cast, and setlists you create are stored as records on your AT Protocol Personal Data Server (PDS) — not on Khord's servers. These records are public by design, consistent with how the AT Protocol works.</p>
+    <p>When you register for a Khord instance, you provide an email address, a username, and a password. Your password is stored as a one-way bcrypt hash — it is never stored in plaintext.</p>
+    <p>Songs you share, votes you cast, and setlists you create are stored in the SQLite database on the Khord instance you registered with.</p>
 
     <h2>Information Collected Automatically</h2>
     <p>Khord instances may log standard server access logs (IP address, request path, timestamp) for security and debugging purposes. These logs are not shared with third parties and are retained for a short period.</p>
@@ -138,7 +138,7 @@
 
     <h2>Data Storage</h2>
     <p>Khord is self-hostable software. If you use a third-party Khord instance, that instance's operator controls the server and its data. Each instance may have its own data retention practices.</p>
-    <p>Your music activity (songs, votes, setlists) lives on your own AT Protocol PDS. You can delete any record at any time through your AT Protocol identity provider.</p>
+    <p>Your music activity (songs, votes, setlists) is stored in the database of the Khord instance you use. You can delete your account and all associated data from the instance's settings page at any time.</p>
 
     <h2>Children's Privacy</h2>
     <p>Khord is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
