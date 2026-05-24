@@ -448,11 +448,39 @@
       50% { opacity: 0; }
     }
 
+    /* ── Hero scene image ── */
+    .hero-img {
+      max-width: 720px;
+      margin: 3.5rem auto 0;
+    }
+    .hero-img img {
+      width: 100%;
+      display: block;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border2);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04);
+    }
+
+    /* ── Section intro row (text left, image right) ── */
+    .section-intro-row {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .section-intro-row .section-text { flex: 1; min-width: 0; }
+    .section-intro-row .section-text .section-intro { margin-bottom: 0; }
+    .section-img { flex-shrink: 0; width: 240px; }
+    .section-img img { width: 100%; display: block; }
+
     @media (max-width: 640px) {
       nav { padding: 1rem 1.25rem; }
       .hero { padding: 5rem 1.25rem 4rem; }
       section { padding: 4rem 1.25rem; }
       .mixtape-highlight { padding: 1.75rem; }
+      .section-intro-row { flex-direction: column-reverse; gap: 2rem; }
+      .section-img { width: 180px; margin: 0 auto; }
+      .hero-img { margin-top: 2.5rem; }
     }
   </style>
 </head>
@@ -461,6 +489,7 @@
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-brand">
+      <img src="logo.png" alt="" aria-hidden="true" style="height: 1.75rem; width: auto; object-fit: contain;">
       <span class="nav-wordmark">Khord</span>
     </a>
     <a href="https://github.com/khordapp/khord" class="btn btn-secondary" style="font-size:0.78rem; padding: 0.45rem 1rem;">GitHub</a>
@@ -468,11 +497,6 @@
 
   <!-- Hero -->
   <div class="hero">
-    <img
-      src="logo.png"
-      alt="Khord"
-      style="width: 10rem; height: 10rem; margin: 0 auto 1.5rem; display: block;"
-    />
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
       <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent2); border: 1px solid rgba(37,88,168,0.4); background: rgba(37,88,168,0.1); padding: 0.28rem 0.65rem; border-radius: 999px;">Beta</span>
     </div>
@@ -483,6 +507,9 @@
     </p>
     <div class="hero-actions">
       <a href="https://github.com/khordapp/khord" class="btn btn-primary">View on GitHub</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/khord-share.png" alt="Khord music sharing interface — a vintage computing setup with a turntable, monitor, and phone" />
     </div>
     <nav class="scroll-nav">
       <a href="#how-it-works">How it works</a>
@@ -506,11 +533,18 @@
 
   <!-- How it works -->
   <section id="how-it-works">
-    <p class="section-label">How it works</p>
-    <h2>Share once, listen anywhere.</h2>
-    <p class="section-intro">
-      No more "I don't use Spotify." Share a song and your friends hear it on whatever platform they love.
-    </p>
+    <div class="section-intro-row">
+      <div class="section-text">
+        <p class="section-label">How it works</p>
+        <h2>Share once, listen anywhere.</h2>
+        <p class="section-intro">
+          No more "I don't use Spotify." Share a song and your friends hear it on whatever platform they love.
+        </p>
+      </div>
+      <div class="section-img">
+        <img src="images/headphones.png" alt="" aria-hidden="true" style="filter: drop-shadow(0 12px 32px rgba(160,120,50,0.22));">
+      </div>
+    </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
@@ -534,12 +568,19 @@
 
   <!-- Mixtapes -->
   <section id="mixtapes">
-    <p class="section-label">Mixtapes</p>
-    <h2>Collaborative playlists,<br>built together.</h2>
-    <p class="section-intro">
-      Mixtapes are the heart of Khord. Create an ordered playlist, share it with your community,
-      and let anyone propose songs — all without giving up control.
-    </p>
+    <div class="section-intro-row">
+      <div class="section-text">
+        <p class="section-label">Mixtapes</p>
+        <h2>Collaborative playlists,<br>built together.</h2>
+        <p class="section-intro">
+          Mixtapes are the heart of Khord. Create an ordered playlist, share it with your community,
+          and let anyone propose songs — all without giving up control.
+        </p>
+      </div>
+      <div class="section-img" style="width: 280px;">
+        <img src="images/cassette.png" alt="" aria-hidden="true" style="filter: drop-shadow(0 12px 32px rgba(160,120,50,0.22));">
+      </div>
+    </div>
     <div class="mixtape-highlight">
       <div class="mixtape-col">
         <div class="mixtape-item">
